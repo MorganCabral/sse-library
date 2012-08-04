@@ -16,7 +16,7 @@ sudo apt-get install python python-pip
 
 # Arch
 sudo pacman -S python2 python2-pip
-*set up symlink from pip to pip2.7 or see if pip will fix itself when upgraded.
+# set up symlink from pip to pip2.7 or see if pip will fix itself when upgraded.
 
 # Fedora/RHEL/etc. *TODO: Confirm that this works*
 sudo yum update
