@@ -11,13 +11,23 @@ SSE Library Project. More to be added as this project kicks off...
 brew install python virtualenv
 # Ubuntu/Debian
 sudo apt-get update
-sudo apt-get install python virtualenv
+sudo apt-get install python python-pip
 # Arch
-sudo pacman -S python virtualenv
-# Fedora/RHEL/etc.
+sudo pacman -S python2 python2-pip
+*set up symlink from pip to pip2.7 or look into 
+
+# Fedora/RHEL/etc. *TODO: Confirm that this works*
 sudo yum update
-sudo yum install python virtualenv
+sudo yum install python python-pip
 ```
+
+Then,
+
+```bash
+sudo pip install --upgrade pip
+sudo pip install --upgrade virtualenv
+```
+
 
 2) Run the library's install script.
 
