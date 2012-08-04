@@ -10,12 +10,18 @@ cd sse-library
 # It doesn't particularly matter what you call this.
 virtualenv env
 
+# Activate the virtual environment.
+source env/bin/activate 
+
 # Note: At this point, there should be the project itself, an env directory and a file called requirements.txt.
 
 # Install project dependencies.
-source env/bin/activate && pip install -r requirements.txt && deactivate
+pip install -r requirements.txt
 
 # Note: If we go the PostgreSQL route, set up the db users and such here.
 
 # Run syncdb to setup the datebase schema.
-source env/bin/activate && cd sse_library && ./manage.py syncdb && deactivate
+#cd sse_library && python manage.py syncdb
+
+# We're done here. Get out of the virtual environment.
+deactivate
