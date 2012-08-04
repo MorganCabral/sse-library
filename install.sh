@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# Put the project somewhere. Doesn't particularly matter where.
-mkdir ~/Projects/PROJECT_NAME && cd ~/Projects/PROJECT_NAME
+# Make a directory for the project in the current directory. Then, CD into it.
+mkdir sse-library && cd sse-library
 
 # Setup the virtual environment we'll be using for development.
 # It doesn't particularly matter what you call this.
@@ -14,10 +14,9 @@ source env/bin/activate
 # terminal input line thingy.
 
 # Grab the repo from github.
-git clone *REPO-URL-HERE*
+git clone https://github.com/MorganCabral/sse-library.git
 
-# Note: At this point, you should have the django project, your virtual
-# environment and a requirements.txt file in your project directory.
+# Note: At this point, there should be the project itself, an env directory and a file called requirements.txt.
 
 # Install project dependencies.
 pip install -r requirements.txt
@@ -25,7 +24,7 @@ pip install -r requirements.txt
 # Note: If we go the PostgreSQL route, set up the db users and such here.
 
 # Run syncdb to setup the datebase schema.
-cd PROJECT_NAME && python manage.py syncdb
+cd sse_library && ./manage.py syncdb
 
 # Run this if you want to get out of the virtual environment.
 deactivate
