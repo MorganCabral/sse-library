@@ -5,6 +5,7 @@ SSE Library Project. More to be added as this project kicks off...
 ## Installation
 
 1) Install python and virtualenv for your system.
+
 ```bash
 # Mac OS (with Homebrew)
 brew install python virtualenv
@@ -19,6 +20,7 @@ sudo yum install python virtualenv
 ```
 
 2) Run the library's install script.
+
 `curl https://raw.github.com/MorganCabral/sse-library/master/install.sh -o - | sh`
 
 3) ????
