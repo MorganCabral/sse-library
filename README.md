@@ -9,12 +9,14 @@ SSE Library Project. More to be added as this project kicks off...
 ```bash
 # Mac OS (with Homebrew)
 brew install python virtualenv
+
 # Ubuntu/Debian
 sudo apt-get update
 sudo apt-get install python python-pip
+
 # Arch
 sudo pacman -S python2 python2-pip
-*set up symlink from pip to pip2.7 or look into 
+*set up symlink from pip to pip2.7 or see if pip will fix itself when upgraded.
 
 # Fedora/RHEL/etc. *TODO: Confirm that this works*
 sudo yum update
