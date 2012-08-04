@@ -27,11 +27,5 @@ pip install -r requirements.txt
 # Run syncdb to setup the datebase schema.
 cd PROJECT_NAME && python manage.py syncdb
 
-# Note: If using gunicorn, use this command instead of the follow.
-python manage.py run_gunicorn
-
-# Start up a local dev server to test with.
-python manage.py runserver
-
 # Run this if you want to get out of the virtual environment.
 deactivate
