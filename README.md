@@ -7,7 +7,7 @@ SSE Library Project. More to be added as this project kicks off...
 1) Install python and virtualenv for your system.
 
 ```bash
-# Mac OS (with Homebrew)
+# Mac OS (with Homebrew) *TODO: Confirm that this works*
 brew install python virtualenv
 
 # Ubuntu/Debian
