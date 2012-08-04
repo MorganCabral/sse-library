@@ -8,7 +8,7 @@ SSE Library Project. More to be added as this project kicks off...
 ```bash
 # Mac OS (with Homebrew)
 brew install python virtualenv
-# Ubuntu
+# Ubuntu/Debian
 sudo apt-get update
 sudo apt-get install python virtualenv
 # Arch
