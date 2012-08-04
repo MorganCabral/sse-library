@@ -6,17 +6,18 @@ SSE Library Project. More to be added as this project kicks off...
 
 1) Install python and virtualenv for your system.
 
-```bash
-# Mac OS (with Homebrew)
-brew install python virtualenv
+For Mac OS X, See [this article](https://github.com/mxcl/homebrew/wiki/Homebrew-and-Python).
 
+For Linux:
+
+```bash
 # Ubuntu/Debian
 sudo apt-get update
 sudo apt-get install python python-pip
 
 # Arch
 sudo pacman -S python2 python2-pip
-*set up symlink from pip to pip2.7 or see if pip will fix itself when upgraded.
+# set up symlink from pip to pip2.7 or see if pip will fix itself when upgraded.
 
 # Fedora/RHEL/etc. *TODO: Confirm that this works*
 sudo yum update
