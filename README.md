@@ -15,7 +15,7 @@ sudo apt-get install python virtualenv
 sudo pacman -S python virtualenv
 # Fedora/RHEL/etc.
 sudo yum update
-yum install python virtualenv
+sudo yum install python virtualenv
 ```
 
 2) `curl https://raw.github.com/MorganCabral/sse-library/master/install.sh -o - | sh`
