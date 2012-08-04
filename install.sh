@@ -1,7 +1,4 @@
-# Replace the following with your system's equivalent.
-sudo apt-get update && sudo apt-get install python virtualenv # Ubuntu
-# sudo yum update && yum install python virtualenv # Fedora/RHEL/etc.
-# sudo pacman -Syu python virtualenv # Arch
+#!/bin/bash
 
 # Put the project somewhere. Doesn't particularly matter where.
 mkdir ~/Projects/PROJECT_NAME && cd ~/Projects/PROJECT_NAME
