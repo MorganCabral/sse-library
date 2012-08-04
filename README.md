@@ -18,7 +18,8 @@ sudo yum update
 sudo yum install python virtualenv
 ```
 
-2) `curl https://raw.github.com/MorganCabral/sse-library/master/install.sh -o - | sh`
+2) Run the library's install script.
+`curl https://raw.github.com/MorganCabral/sse-library/master/install.sh -o - | sh`
 
 3) ????
 
