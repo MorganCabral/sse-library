@@ -1,6 +1,6 @@
 # sse-library
 
-SSE Library Project. More to be added as this project kicks off...
+A CMS driven library book management system. More to come in the fall...
 
 ![Travis-CI](https://secure.travis-ci.org/cliffano/datagen.png?branch=master)
 
