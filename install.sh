@@ -11,7 +11,7 @@ cd sse-library
 virtualenv env
 
 # Activate the virtual environment.
-source env/bin/activate 
+. env/bin/activate 
 
 # Note: At this point, there should be the project itself, an env directory and a file called requirements.txt.
 
