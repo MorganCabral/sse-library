@@ -11,4 +11,5 @@ install:
 
 # command to run tests
 script:
-  - ./sse_library/manage.py test library
+  - python sse_library/manage.py test library 
+
