@@ -2,6 +2,8 @@
 
 SSE Library Project. More to be added as this project kicks off...
 
+![Travis-CI](https://secure.travis-ci.org/cliffano/datagen.png?branch=master)
+
 ## Installation
 
 1) Install python and virtualenv for your system.
