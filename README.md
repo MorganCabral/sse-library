@@ -1,6 +1,6 @@
 # sse-library
 
-A CMS driven library book management system. More to come in the fall...
+A CMS driven library book management system built on top of Django. This is being developed by the Society of Software Engineers at RIT. More to come in the fall...
 
 ![Travis-CI](https://secure.travis-ci.org/cliffano/datagen.png?branch=master)
 
