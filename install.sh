@@ -21,7 +21,9 @@ pip install -r requirements.txt
 # Note: If we go the PostgreSQL route, set up the db users and such here.
 
 # Run syncdb to setup the datebase schema.
-#cd sse_library && python manage.py syncdb
+cd sse_library && python manage.py syncdb
+
+echo "sse-library is installed."
 
 # We're done here. Get out of the virtual environment.
 deactivate
