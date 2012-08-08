@@ -15,24 +15,30 @@ For Linux:
 ```bash
 # Ubuntu/Debian
 sudo apt-get update
-sudo apt-get install python python-pip
+sudo apt-get install curl git python python-pip
 
 # Arch
-sudo pacman -S python2 python2-pip
-# set up symlink from pip to pip2.7 or see if pip will fix itself when upgraded.
+sudo pacman -Syu curl git python2 python2-pip
 
-# Fedora/RHEL/etc. *TODO: Confirm that this works*
+# Fedora/RHEL/etc.
 sudo yum update
-sudo yum install python python-pip
+sudo yum install curl git python python-pip
 ```
 
 Then,
 
 ```bash
+# Ubuntu/Debian
 sudo pip install --upgrade pip
 sudo pip install --upgrade virtualenv
-```
 
+# Arch
+# TODO: Figure this one out.
+
+#Fedora
+sudo pip-python install --upgrade pip
+sudo pip install --upgrade virtualenv
+```
 
 2) Run the library's install script.
 
