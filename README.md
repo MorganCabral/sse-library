@@ -30,13 +30,14 @@ Then,
 ```bash
 # Ubuntu/Debian
 sudo pip install --upgrade pip
-sudo pip install --upgrade virtualenv
 
 # Arch
 # TODO: Figure this one out.
 
-#Fedora
+# Fedora
 sudo pip-python install --upgrade pip
+
+# All
 sudo pip install --upgrade virtualenv
 ```
 
