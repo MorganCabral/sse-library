@@ -5,8 +5,9 @@ A CMS driven library book management system built on top of Django. This is bein
 ![Travis-CI](https://secure.travis-ci.org/cliffano/datagen.png?branch=master)
 
 ## Installation
+0) Run megaInstall.sh .  If this worked, you should be pretty much done.  Skip to step 3.
 
-1) [Install Curl, Git, Python 2.7.x and PIP](https://github.com/MorganCabral/sse-library/wiki/Installation-Prereqs)
+1) If you decided that package managers were for weirdos or decided to use some obscure package manager then you will have to [Install Curl, Git, Python 2.7.x and PIP](https://github.com/MorganCabral/sse-library/wiki/Installation-Prereqs)
 
 2) Run the library's install script.
 
