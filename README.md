@@ -6,40 +6,7 @@ A CMS driven library book management system built on top of Django. This is bein
 
 ## Installation
 
-1) Install python and virtualenv for your system.
-
-For Mac OS X, See [this article](https://github.com/mxcl/homebrew/wiki/Homebrew-and-Python).
-
-For Linux:
-
-```bash
-# Ubuntu/Debian
-sudo apt-get update
-sudo apt-get install curl git python python-pip
-
-# Arch
-sudo pacman -Syu curl git python2 python2-pip
-
-# Fedora/RHEL/etc.
-sudo yum update
-sudo yum install curl git python python-pip
-```
-
-Then,
-
-```bash
-# Ubuntu/Debian
-sudo pip install --upgrade pip
-
-# Arch
-# TODO: Figure this one out.
-
-# Fedora
-sudo pip-python install --upgrade pip
-
-# All
-sudo pip install --upgrade virtualenv
-```
+1) [Install Curl, Git, Python 2.7.x and PIP](https://github.com/MorganCabral/sse-library/wiki/Installation-Prereqs)
 
 2) Run the library's install script.
 
