@@ -1,6 +1,6 @@
 # sse-library [![Build Status](https://secure.travis-ci.org/MorganCabral/sse-library.png?branch=master)](http://travis-ci.org/MorganCabral/sse-library)
 
-A CMS driven library book management system built on top of Django. This is being developed by the Society of Software Engineers at RIT. More to come in the fall...
+A CMS driven library book management system built on top of Django. This is being developed by the Society of Software Engineers at RIT. More to come in the fall....
 
 ## Installation
 0) Run megaInstall.sh .  If this worked, you should be pretty much done.  Skip to step 3.
