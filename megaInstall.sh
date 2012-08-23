@@ -26,7 +26,7 @@ if command -v pacman >/dev/null
     if $PM == false
       then
         echo "Installing prereqs with pacman..."
-        sudo pacman -Syu curl git python2 python2-pip
+        sudo pacman -S curl git python2 python2-pip
         $PM = true
     fi
   fi
