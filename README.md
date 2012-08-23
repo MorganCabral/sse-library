@@ -12,6 +12,6 @@ This script tries to automagically install prereqs for you with your package
 manager. If you do not have apt-get, yum, or pacman, you will need to [install
 Curl, Git, Python 2.7.x and PIP
 manually](https://github.com/MorganCabral/sse-library/wiki/Installation-Prereqs).
-If you are on a Mac, read our [Homebrew and
+If you are on a Mac, read the [Homebrew and
 Python](https://github.com/mxcl/homebrew/wiki/Homebrew-and-Python) article. You
 can run the install script again when you have the prereqs installed.
