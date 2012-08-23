@@ -3,7 +3,7 @@
 PM=false
 clear
 
-# Install the pre-reqs
+# Install the pre-reqs.
 if command -v apt-get > /dev/null
   then
     echo "Installing prereqs with apt-get..."
