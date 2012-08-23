@@ -3,7 +3,7 @@
 PM=false
 clear
 
-#Install the pre-reqs
+# Install the pre-reqs
 if command -v apt-get > /dev/null
   then
     echo "Using apt-get"
@@ -11,7 +11,7 @@ if command -v apt-get > /dev/null
     sudo apt-get -y install curl git python python-pip
     $PM = true
   fi
-if command -v yum >/dev/null
+if command -v yum > /dev/null
   then
     if $PM == false
       then
@@ -21,7 +21,6 @@ if command -v yum >/dev/null
         $PM = true
     fi
   fi
-
 if command -v pacman >/dev/null
   then
     if $PM == false
@@ -32,10 +31,12 @@ if command -v pacman >/dev/null
     fi
   fi
 
-#I beg of you, get a package manager!
+# I beg of you, get a package manager!
 if $PM == false
   then
     echo "Install pre-reqs manually and use install.sh"
     exit
   fi
+
+# Run the install script
 ./install.sh
