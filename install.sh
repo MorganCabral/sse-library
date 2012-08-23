@@ -34,7 +34,7 @@ if command -v pacman >/dev/null
 # I beg of you, get a package manager!
 if $PM == false
   then
-    echo "Install pre-reqs manually and use install.sh"
+    echo "Your package manager is not supported by this script. Install pre-reqs manually and then run install.sh again."
     exit
   fi
 
