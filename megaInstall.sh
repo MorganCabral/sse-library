@@ -6,7 +6,7 @@ clear
 # Install the pre-reqs
 if command -v apt-get > /dev/null
   then
-    echo "Using apt-get"
+    echo "Installing prereqs with apt-get..."
     sudo apt-get -y update
     sudo apt-get -y install curl git python python-pip
     $PM = true
@@ -15,7 +15,7 @@ if command -v yum > /dev/null
   then
     if $PM == false
       then
-        echo "Using yum"
+        echo "Installing prereqs with yum..."
         sudo yum update
         sudo yum -y install curl git python python-pip
         $PM = true
@@ -25,7 +25,7 @@ if command -v pacman >/dev/null
   then
     if $PM == false
       then
-        echo"Using pacman"
+        echo "Installing prereqs with pacman..."
         sudo pacman -Syu curl git python2 python2-pip
         $PM = true
     fi
