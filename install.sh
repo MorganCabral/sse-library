@@ -17,6 +17,17 @@ else
   exit
 fi
 
+# Upgrade pip and install virtualenv with pip.
+echo "Upgrading pip and installing virtualenv..."
+if command -v pip2 > /dev/null; then
+  pip_command="sudo pip2"
+elif command -v pip > /dev/null; then
+  pip_command="sudo pip"
+else
+  echo "Pip was not installed properly. Please make sure that either \"pip\" or \"pip2\" is executable."
+  exit
+fi
+$pip_command install --upgrade pip virtualenv
 
 # Grab the repo from github.
 git clone https://github.com/MorganCabral/sse-library.git
