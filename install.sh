@@ -1,7 +1,6 @@
 #!/bin/bash
 
 PM=false
-clear
 
 # Install the pre-reqs.
 if command -v apt-get > /dev/null
