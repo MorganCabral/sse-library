@@ -6,7 +6,7 @@ A CMS driven library book management system built on top of Django. This is bein
 
 Download and run the library's install script with this bit of code:
 
-`curl https://raw.github.com/MorganCabral/sse-library/master/install.sh -o - | sh`
+`bash <(curl https://raw.github.com/MorganCabral/sse-library/master/install.sh -o -)`
 
 This script tries to automagically install prereqs for you with your package
 manager. If you do not have apt-get, yum, or pacman, you will need to [install
