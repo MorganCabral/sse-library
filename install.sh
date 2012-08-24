@@ -6,12 +6,12 @@ if command -v apt-get > /dev/null; then
   sudo apt-get -y update
   sudo apt-get -y install curl git python python-pip
 elif command -v yum > /dev/null; then
-	echo "Installing prereqs with yum..."
-	sudo yum update
-	sudo yum -y install curl git python python-pip
+  echo "Installing prereqs with yum..."
+  sudo yum update
+  sudo yum -y install curl git python python-pip
 elif command -v pacman >/dev/null; then
-	echo "Installing prereqs with pacman..."
-	sudo pacman -S curl git python2 python2-pip
+  echo "Installing prereqs with pacman..."
+  sudo pacman -S curl git python2 python2-pip
 else
   echo "Your package manager is not supported by this script. Install pre-reqs manually and then run install.sh again."
   exit
