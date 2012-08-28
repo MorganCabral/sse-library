@@ -1,7 +1,9 @@
 #!/bin/bash
 
 # Install the pre-reqs with a package manager.
-if command -v apt-get > /dev/null; then
+if [[ $1="--no-prereqs" ]]; then
+	echo "Prereq installation skipped."
+elif command -v apt-get > /dev/null; then
   echo "Installing prereqs with apt-get..."
   sudo apt-get -y update
   sudo apt-get -y install curl git python python-pip
