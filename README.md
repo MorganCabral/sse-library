@@ -1,19 +1,22 @@
 # sse-library [![Build Status](https://secure.travis-ci.org/MorganCabral/sse-library.png?branch=master)](http://travis-ci.org/MorganCabral/sse-library)
-
 A CMS driven library book management system built on top of Django. This is being developed by the Society of Software Engineers at RIT. More to come in the fall....
 
 ## Installation
+This script tries to automagically install prereqs for you with a package
+manager, and then sets up additional things you will need for working on the
+library. If your system doesn't have a compatible package manager, you can
+install the preqres manually and then run the rest of the install script as
+usual.
 
-Download and run the library's install script with this bit of code:
+### Systems with apt-get/yum/pacman
+1. `bash <(curl https://raw.github.com/MorganCabral/sse-library/master/install.sh -o -)`
 
-`bash <(curl https://raw.github.com/MorganCabral/sse-library/master/install.sh -o -)`
+### Mac OS
+1. Read and follow the [Homebrew and
+Python](https://github.com/mxcl/homebrew/wiki/Homebrew-and-Python) article.
+2. `bash <(curl https://raw.github.com/MorganCabral/sse-library/master/install.sh -o -) --no-prereqs`
 
-This script tries to automagically install prereqs for you with your package
-manager. If you do not have apt-get, yum, or pacman, you will need to [install
-Curl, Git, Python 2.7.x and PIP
-manually](https://github.com/MorganCabral/sse-library/wiki/Installation-Prereqs).
-If you are on a Mac, read the [Homebrew and
-Python](https://github.com/mxcl/homebrew/wiki/Homebrew-and-Python) article. Then
-run the install script with the `--no-prereqs` flag, like this:
-
-`bash <(curl https://raw.github.com/MorganCabral/sse-library/master/install.sh -o -) --no-prereqs`
+### Other systems
+1. [Install Curl, Git, Python 2.7.x and PIP
+manually.](https://github.com/MorganCabral/sse-library/wiki/Installation-Prereqs).
+2. `bash <(curl https://raw.github.com/MorganCabral/sse-library/master/install.sh -o -) --no-prereqs`
