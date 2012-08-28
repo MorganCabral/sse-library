@@ -8,7 +8,7 @@ library. If your system doesn't have a compatible package manager, you can
 install the preqres manually and then run the rest of the install script as
 usual.
 
-### Systems with apt-get/yum/pacman
+### Systems with apt-get/yum/pacman (Ubuntu/Debian/Fedora/Red Hat/Arch/etc.)
 1. `bash <(curl https://raw.github.com/MorganCabral/sse-library/master/install.sh -o -)`
 
 ### Mac OS
