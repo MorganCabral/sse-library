@@ -13,5 +13,7 @@ manager. If you do not have apt-get, yum, or pacman, you will need to [install
 Curl, Git, Python 2.7.x and PIP
 manually](https://github.com/MorganCabral/sse-library/wiki/Installation-Prereqs).
 If you are on a Mac, read the [Homebrew and
-Python](https://github.com/mxcl/homebrew/wiki/Homebrew-and-Python) article. You
-can run the install script again when you have the prereqs installed.
+Python](https://github.com/mxcl/homebrew/wiki/Homebrew-and-Python) article. Then
+run the install script with the `--no-prereqs` flag, like this:
+
+`bash <(curl https://raw.github.com/MorganCabral/sse-library/master/install.sh -o -) --no-prereqs`
