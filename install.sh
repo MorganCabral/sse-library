@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Install the pre-reqs with a package manager.
-if [[ $1="--no-prereqs" ]]; then
+if [[ $* == *--no-prereqs* ]]; then
 	echo "Prereq installation skipped."
 elif command -v apt-get > /dev/null; then
   echo "Installing prereqs with apt-get..."
