@@ -1,5 +1,36 @@
 #!/bin/bash
 
+# Install the pre-reqs with a package manager.
+if [[ $* == *--no-prereqs* ]]; then
+	echo "Prereq installation skipped."
+elif command -v apt-get > /dev/null; then
+  echo "Installing prereqs with apt-get..."
+  sudo apt-get -y update
+  sudo apt-get -y install curl git python python-pip
+elif command -v yum > /dev/null; then
+  echo "Installing prereqs with yum..."
+  sudo yum update
+  sudo yum -y install curl git python python-pip
+elif command -v pacman >/dev/null; then
+  echo "Installing prereqs with pacman..."
+  sudo pacman -S curl git python2 python2-pip
+else
+  echo "Your package manager is not supported by this script. Install pre-reqs manually and then run install.sh again."
+  exit
+fi
+
+# Upgrade pip and install virtualenv with pip.
+echo "Upgrading pip and installing virtualenv..."
+if command -v pip2 > /dev/null; then
+  pip_command="sudo pip2"
+elif command -v pip > /dev/null; then
+  pip_command="sudo pip"
+else
+  echo "Pip was not installed properly. Please make sure that either \"pip\" or \"pip2\" is executable."
+  exit
+fi
+$pip_command install --upgrade pip virtualenv
+
 # Grab the repo from github.
 git clone https://github.com/MorganCabral/sse-library.git
 
