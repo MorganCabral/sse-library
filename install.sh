@@ -32,7 +32,7 @@ fi
 $pip_command install --upgrade pip virtualenv
 
 # Grab the repo from github.
-git clone https://github.com/MorganCabral/sse-library.git
+git clone https://github.com/rit-sse/sse-library.git
 
 # Go into the project directory.
 cd sse-library
