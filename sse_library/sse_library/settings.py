@@ -78,7 +78,8 @@ STATICFILES_FINDERS = (
 )
 
 # Make this unique, and don't share it with anybody.
-SECRET_KEY = 'i@$hof)n7^p(8+ldil*ovu)phuqyf1-hvgtc#8ix5b-5n)_ot+'
+# Note: Storing this here is a really bad idea - put it in your local settings file.
+SECRET_KEY = 'key-is-in-local_settings.py'
 
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (
