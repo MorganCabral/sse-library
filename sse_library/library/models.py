@@ -1,6 +1,6 @@
 from django.db import models
 from django.utils import timezone
-
+from datetime import timedelta
 class Author(models.Model):
   """ Author of a book.
   
@@ -46,3 +46,21 @@ class Book(models.Model):
   publish_date = models.DateField(default=timezone.now())
   condition = models.CharField(max_length=1, choices=CONDITIONS, default=DB_GOOD)
   is_required_text = models.BooleanField()
+
+class Transaction(models.Model):
+  
+  ACTIONS = (
+    ('Renew', 'Renew'),
+    ('ChkOut', 'Check Out'),
+    ('ChkIn', 'Check in'))
+
+  #Foreign Keys
+  #TODO:Add in FKs to users
+  book = models.ForeignKey(Book)
+
+  #Fields
+  date= models.DateTimeField(db_column='Date of Transaction', default = timezone.now())
+  due_date = models.DateTimeField(db_column='Due Back',default= timezone.now() + timedelta(days=7))
+  #TODO:Make tables for conditions/actions to make the site more configurable and so that things (such as conditions) can be used in multiple objects
+  action = models.CharField(max_length=90, choices=ACTIONS, default='ChkOut')
+  trans_notes = models.CharField(max_length=500)
