@@ -1,6 +1,5 @@
 from django.db import models
 from django.utils import timezone
-
 import datetime, sha
 
 DEFAULT_CHECKOUT_DURATION = datetime.timedelta(weeks=3)
