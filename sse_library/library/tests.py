@@ -89,6 +89,11 @@ class PatronTest(test.TestCase):
         email='kok6969@rit.edu',
         uid='001234567')
 
+    self.other_patron = Patron.objects.create(
+        name='Other Patron',
+        email='otp1234@rit.edu',
+        uid='001111111')
+
     self.publisher = Publisher.objects.create(
         name='Publisher')
 
@@ -103,11 +108,54 @@ class PatronTest(test.TestCase):
         publisher=self.publisher)
 
   def test_checked_out_books(self):
+    """ Check out books one at a time and tests if books tracked to borower. """
+
+    # :a => not checked out
+    # :b => not checked out
+    self.assertFalse(self.book_a in self.patron.checked_out_books())
+    self.assertFalse(self.book_b in self.patron.checked_out_books())
+
+    # checkout :a
     self.patron.checkout(self.book_a)
+
+    # :a => checked out
+    # :b => not checked out
+    self.assertTrue(self.book_a in self.patron.checked_out_books())
+    self.assertFalse(self.book_b in self.patron.checked_out_books())
+
+    # checkout :b
+    self.patron.checkout(self.book_b)
+
+    # :a => checked out
+    # :b => checked out
+    self.assertTrue(self.book_a in self.patron.checked_out_books())
+    self.assertTrue(self.book_b in self.patron.checked_out_books())
+
+  def test_checked_out_books_multiple_borrowers(self):
+    """ Two people borrow different books, checked_out_books is correct. """
+
+    self.patron.checkout(self.book_a)
+    self.other_patron.checkout(self.book_b)
 
     self.assertTrue(self.book_a in self.patron.checked_out_books())
     self.assertFalse(self.book_b in self.patron.checked_out_books())
 
-    self.patron.checkout(self.book_b)
+    self.assertFalse(self.book_a in self.other_patron.checked_out_books())
+    self.assertTrue(self.book_b in self.other_patron.checked_out_books())
 
-    self.assertTrue(self.book_b in self.patron.checked_out_books())
+  def test_check_in_book(self):
+    self.patron.checkout(self.book_a)
+    self.patron.checkin(self.book_a)
+
+    self.assertFalse(self.book_a in self.patron.checked_out_books())
+
+  def test_check_in_book_twice(self):
+    self.patron.checkout(self.book_a)
+    self.patron.checkin(self.book_a)
+
+    self.assertRaises(CheckinException,
+        self.patron.checkin, self.book_a)
+
+  def test_check_in_not_borrowed_book(self):
+    self.assertRaises(CheckinException,
+        self.patron.checkin, self.book_a)

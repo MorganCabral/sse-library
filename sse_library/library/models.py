@@ -7,6 +7,12 @@ DEFAULT_CHECKOUT_DURATION = datetime.timedelta(weeks=3)
 class CheckoutException(Exception):
   pass
 
+class CheckinException(Exception):
+  pass
+
+class ConsistencyError(Exception):
+  pass
+
 class Author(models.Model):
   """ Author of a book.
   
@@ -77,7 +83,7 @@ class Patron(models.Model):
 
     Exceptions:
       Book is already checked out by someone
-      Book is missing or not
+      Book is missing
     """
 
     if book.is_missing:
@@ -97,6 +103,33 @@ class Patron(models.Model):
     # Create and save transaction
     checkout_transaction = Transaction.objects.create(
         book=book, borrower=self)
+
+  def checkin(self, book):
+    """ Attempt to check in (return) a book.
+
+    Exceptions:
+      There is no existing transaction for this user and book.
+    """
+
+    book_transaction = Transaction.objects.filter(
+        is_transaction_completed=False, book=book, borrower=self)
+
+    if not book_transaction.exists():
+      raise CheckinException(
+          "{0} is not checked out by {1} or is already returned".format(
+              book.title, self.name))
+
+    # This should never happen
+    if book_transaction.count() != 1:
+      raise ConsistencyError("{0} has multiple transactions with {1}".format(
+          self.name, book.title))
+
+    book_transaction = book_transaction[0]
+
+    book_transaction.is_transaction_completed = True
+    book_transaction.return_date = timezone.now()
+
+    book_transaction.save()
 
 class Transaction(models.Model):
   """ Check out a book.
