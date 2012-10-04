@@ -47,10 +47,11 @@ class Book(models.Model):
       default=None)
 
   # Fields
-  title = models.CharField(max_length=254)
+  title = models.CharField(max_length=254, default='No Title')
   isbn = models.CharField(max_length=17, unique=True)
   publish_date = models.DateField(default=timezone.now())
   condition = models.CharField(max_length=254, default='Good')
+  copies = models.IntegerField(default=1)
   is_missing = models.BooleanField(default=False)
   is_required_text = models.BooleanField(default=False)
 

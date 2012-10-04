@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block title %}
+  Register Book
+{% endblock %}
+
+{% block content %}
+<form action='{% url library.views.new_book %}' method='post'>
+  {% csrf_token %}
+
+  <p>
+    <label for='isbn'>ISBN:</label>
+    <input type='text' name='isbn' id='id_isbn' />
+  </p>
+  
+  <input type='submit' value='Submit' />
+</form>
+{% endblock %}

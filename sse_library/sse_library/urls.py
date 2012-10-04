@@ -1,17 +1,15 @@
 from django.conf.urls import patterns, include, url
-
-# Uncomment the next two lines to enable the admin:
-from django.contrib import admin
+from django.contrib import admin  # Enable Admin
 admin.autodiscover()
 
+import library.views
+
 urlpatterns = patterns('',
-    # Examples:
-    # url(r'^$', 'sse_library.views.home', name='home'),
-    # url(r'^sse_library/', include('sse_library.foo.urls')),
-
-    # Uncomment the admin/doc line below to enable admin documentation:
-    # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
-
     # Uncomment the next line to enable the admin:
     url(r'^admin/', include(admin.site.urls)),
+
+    # Book routes
+    url(r'^books[/]?$', library.views.index),
+    url(r'^books/register[/]?', library.views.register),
+    url(r'^books/new_book[/]?', library.views.new_book),
 )
