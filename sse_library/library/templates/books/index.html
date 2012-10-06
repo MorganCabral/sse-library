@@ -5,5 +5,23 @@
 {% endblock %}
 
 {% block content %}
-<a href='{% url library.views.register %}'>register books</a>
+<a href='/books/register'>register books</a>
+
+<table>
+  <thead>
+      <tr>
+        <td>ISBN</td>
+        <td>Copies</td>
+      </tr>
+  </thead>
+  <tbody>
+    {% for book in books %}
+      <tr>
+        <td>{{ book.isbn }}</td>
+        <td>{{ book.copies }}</td>
+      </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
 {% endblock %}
