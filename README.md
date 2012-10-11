@@ -16,6 +16,8 @@ usual.
 Python](https://github.com/mxcl/homebrew/wiki/Homebrew-and-Python) article.
 2. `bash <(curl https://raw.github.com/MorganCabral/sse-library/master/install.sh -o -) --no-prereqs`
 
+### Windows (forthcoming)
+
 ### Other systems
 1. [Install Curl, Git, Python 2.7.x and PIP
 manually.](https://github.com/MorganCabral/sse-library/wiki/Installation-Prereqs)
