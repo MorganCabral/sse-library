@@ -9,12 +9,9 @@ install the preqreqs manually and then run the rest of the install script as
 usual.
 
 ### Windows
+1. Open PowerShell (cmd.exe will not work).
+2. `(New-Object System.Net.WebClient).DownloadString("http://bit.ly/Rn6VNl") | Invoke-Expression`
 Pro Tip: You can right click to paste stuff into PowerShell.
-1. Open PowerShell as an administrator (right-click on it, it's in the menu).
-2. `Set-ExecutionPolicy Unrestricted` and enter "Y" at the prompt. This lets you
-	 run scripts, including our install script.
-3. Open PowerShell again normally, __not__ as an administrator.
-3. `(New-Object System.Net.WebClient).DownloadString("http://bit.ly/Rn6VNl") | Invoke-Expression`
 
 ### Mac OS
 1. Read and follow the [Homebrew and
