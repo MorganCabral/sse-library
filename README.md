@@ -5,7 +5,7 @@ A CMS driven library book management system built on top of Django. This is bein
 This script tries to automagically install prereqs for you with a package
 manager, and then sets up additional things you will need for working on the
 library. If your system doesn't have a compatible package manager, you can
-install the preqres manually and then run the rest of the install script as
+install the preqreqs manually and then run the rest of the install script as
 usual.
 
 ### Windows (forthcoming)
