@@ -8,7 +8,12 @@ library. If your system doesn't have a compatible package manager, you can
 install the preqreqs manually and then run the rest of the install script as
 usual.
 
-### Windows (forthcoming)
+### Windows
+1. Open PowerShell as an administrator (right-click menu).
+2. `Set-ExecutionPolicy Unrestricted` and enter "Y" at the prompt. This lets you
+	 run scripts, including our install script.
+3. Open PowerShell again normally, __not__ as an administrator.
+3. `(New-Object System.Net.WebClient).DownloadString("https://raw.github.com/MorganCabral/sse-library/master/install.ps1") | Invoke-Expression`
 
 ### Mac OS
 1. Read and follow the [Homebrew and
