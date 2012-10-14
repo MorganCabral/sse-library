@@ -11,6 +11,7 @@ usual.
 ### Windows
 1. Open PowerShell (cmd.exe will not work).
 2. `(New-Object System.Net.WebClient).DownloadString("http://bit.ly/Rn6VNl") | Invoke-Expression`
+
 Pro Tip: You can right click to paste stuff into PowerShell.
 
 ### Mac OS
