@@ -36,6 +36,19 @@ function Test-Command([string] $CommandName)
     (Get-Command $CommandName -ErrorAction SilentlyContinue) -ne $null
 }
 
+Write-Host "Checking for Github for Windows"
+if (Test-Path ~\AppData\Local\Github) {
+    Write-Host "Github for Windows Found"
+} else {
+    Write-Host "Github for Windows Not Found"
+    Write-Host "Downloading Github for Windows"
+
+    $github =
+        Download "http://github-windows.s3.amazonaws.com/GitHubSetup.exe" "github-windows-setup.exe"
+
+    Invoke-Expression $github
+}
+
 Write-Host "Checking for Python 2.7"
 if (Test-Path HKLM:\SOFTWARE\Python\PythonCore\2.7) {
     Write-Host "Python 2.7 Found"
