@@ -6,6 +6,10 @@ Function PythonPath {
     (Get-ItemProperty HKLM:\SOFTWARE\Python\PythonCore\2.7\InstallPath)."(default)"
 }
 
+Function Pause {
+    Read-Host -Prompt "Press <Enter> to continue..."
+}
+
 Function Run-Python($command) {
     $python = PythonPath
     $scripts = Join-Path $python -ChildPath "Scripts"
@@ -46,7 +50,10 @@ if (Test-Path ~\AppData\Local\Github) {
     $github =
         Download "http://github-windows.s3.amazonaws.com/GitHubSetup.exe" "github-windows-setup.exe"
 
+    Write-Host "Installing Github for Windows"
     Invoke-Expression $github
+
+    Pause
 }
 
 Write-Host "Checking for Python 2.7"
@@ -64,7 +71,10 @@ if (Test-Path HKLM:\SOFTWARE\Python\PythonCore\2.7) {
             Download "http://www.python.org/ftp/python/2.7.3/python-2.7.3.amd64.msi" "python-2.7.3.msi"
     }
     
+    Write-Host "Installing Python 2.7"
     Invoke-Expression $pyinstall
+
+    Pause
 }
 
 Write-Host "Checking for Easy Install" # Easy my ASS
@@ -75,6 +85,8 @@ if (Test-Command easy_install.exe) {
     
     $easy_install_script = Download "http://peak.telecommunity.com/dist/ez_setup.py" "easy_install_script.py"
     Invoke-Expression $easy_install_script
+
+    Pause
 }
 
 Write-Host "Installing pip"
